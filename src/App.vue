@@ -1,30 +1,39 @@
+
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
+  <router-view /> -->
+  <Header />
+  <Sidebar />
+  <Body />
+  
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from "./components/Header"
+import Body from './components/Body'
+import Sidebar from './components/Sidebar'
 
-#nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+
+
+export default {
+  components: {
+    Header,
+    Sidebar,
+    Body,
+    
+
+
+  },
+};
+</script>
+<style lang="scss" scoped>
+@import "./style/header.css";
+@import "./style/style.css";
+@import "./style/sidebar.css";
+@import "/style/footer.css";
 </style>
